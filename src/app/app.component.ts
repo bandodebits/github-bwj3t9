@@ -70,6 +70,7 @@ export class AppComponent {
 
   public barChartOptions: ChartConfiguration<'bar'>['options'] = {
     responsive: true,
+    locale: 'pt-BR',
     plugins: {
       legend: {
         fullSize: true,
@@ -83,7 +84,6 @@ export class AppComponent {
         },
       },
     },
-
     scales: {
       x: {
         stacked: true,
@@ -92,7 +92,11 @@ export class AppComponent {
         },
       },
       y: {
-        // display: false,
+        ticks: {
+          callback: function (value, index, ticks) {
+            return 'R$' + value;
+          },
+        },
         grid: {
           display: false,
           color: 'rgba(219, 219, 219, 0.3)',
