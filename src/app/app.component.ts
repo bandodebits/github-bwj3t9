@@ -38,32 +38,32 @@ export class AppComponent {
       {
         data: [65, 59, 80, 81, 56, 55, 40],
         label: 'Débito',
-        backgroundColor: '#003f5c',
+        backgroundColor: '#ffa600',
       },
       {
         data: [28, 48, 40, 19, 86, 27, 90],
         label: 'Crédito',
-        backgroundColor: '#444e86',
+        backgroundColor: '#ff6e54',
       },
       {
         data: [29, 18, 20, 33, 22, 23, 30],
         label: 'Pix',
-        backgroundColor: '#955196',
-      },
-      {
-        data: [2, 5, 3, 6, 3, 4, 9],
-        label: 'Boleto',
         backgroundColor: '#dd5182',
       },
       {
         data: [2, 5, 3, 6, 3, 4, 9],
+        label: 'Boleto',
+        backgroundColor: '#955196',
+      },
+      {
+        data: [2, 5, 3, 6, 3, 4, 9],
         label: 'Dinheiro',
-        backgroundColor: '#ff6e54',
+        backgroundColor: '#444e86',
       },
       {
         data: [1, 2, 1, 3, 1, 2, 1],
         label: 'Bônus',
-        backgroundColor: '#ffa600',
+        backgroundColor: '#003f5c',
       },
     ],
   };
@@ -73,12 +73,14 @@ export class AppComponent {
     plugins: {
       legend: {
         fullSize: true,
+        position: 'bottom',
         // display: true,
         labels: {
           boxWidth: 14,
           boxHeight: 14,
-          
-        }
+          borderRadius: 7,
+          useBorderRadius: true,
+        },
       },
     },
 
